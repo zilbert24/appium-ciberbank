@@ -22,9 +22,10 @@ Característica: Inicio de sesión en CiberBank
   Esquema del escenario: Ingresos rechazados
     Dado que Jaime está en la pantalla de login
     Cuando ingresa el usuario "<usuario>" y la contraseña "<clave>"
-    Entonces debería ver el mensaje de error "<mensaje>"
+    Entonces debería ver el mensaje de error "<mensaje>" en el campo "<campo>"
 
     Ejemplos:
-      | usuario   | clave       | mensaje                                |
-      | jaime     | otraClave   | Credenciales inválidas                 |
-      | bloqueado | Cibertec123 | Usuario bloqueado. Contacte a soporte  |
+      | usuario   | clave       | mensaje                                | campo   |
+      | jaime     | otraClave   | Credenciales inválidas                 | login   |
+      | bloqueado | Cibertec123 | Usuario bloqueado. Contacte a soporte  | login   |
+      |           |             | El usuario es obligatorio              | usuario |
